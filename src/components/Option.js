@@ -1,4 +1,7 @@
-function Option({ question, dispatch, answer }) {
+import { useQuize } from "../useContext/QuizContext";
+
+function Option({ question }) {
+     const { dispatch, answer } = useQuize()
      function handleAnswer(index) {
           dispatch({ type: 'newAnswer', payload: index })
 
